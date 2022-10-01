@@ -7,7 +7,7 @@
     <title>Hospital Project  </title>
 
     <!-- font awesome cdn link  -->
-    <link rel="stylesheet" href="sadman.css">
+    <link rel="stylesheet" href="new.css">
 
     <!-- custom css file link  -->
    
@@ -286,7 +286,7 @@ Mail:Khosrul@gmail.com</span>
 
             <input type="email" name= "email" placeholder="your email" class="box">
             <input type="date" name="date" class="box">
-             <input type="text" name= "text" placeholder="your disase" class="box">
+             <input type="text" name= "disase" placeholder="your disase" class="box">
 
             <input type="submit" name="submit" value="book now" class="btn">
         </form>
@@ -303,12 +303,12 @@ if(isset($_POST['submit'])){
  $number = $_POST['number'];
  $email = $_POST['email'];
  $date = $_POST['date'];
-  $text = $_POST['text'];
+  $disase = $_POST['disase'];
 
 
- $connect = new mysqli("localhost","root","","hospital");
+ $connect = new mysqli("localhost","root","","new");
 
- $sql = ("INSERT INTO hos(name, number, email, date,disase) VALUES ('$text','$number','$email','$date','$date')");
+ $sql = ("INSERT INTO neww(name, number, email, date,disase) VALUES ('$text','$number','$email','$date','$disase')");
 
  if(mysqli_query($connect,$sql))
 {
